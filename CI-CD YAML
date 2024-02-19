@@ -31,4 +31,4 @@ ci_pipeline:
 
         - name: main
           run: |
-            python -m pytest -vv test.py
+            python -m pytest -vv main.py
