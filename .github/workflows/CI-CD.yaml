@@ -34,11 +34,11 @@ jobs:
 
         - name: Format
           run: |
-            black app.py
+            black main.py
 
         - name: Lint
           run: |
-            pylint --disable=R,C  app.py
+            pylint --disable=R,C  main.py
 
         - name: Test
           run: |
