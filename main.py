@@ -10,7 +10,7 @@ model = pickle.load(open("model_reg.pkl", "rb"))
 def model_pred(features):
     test_data = pd.DataFrame([features])
     prediction = model.predict(test_data)
-    return int(prediction[0])
+    return float(prediction[0])
 
 @app.get("/")
 async def root():
@@ -34,6 +34,12 @@ async def predict(
     )
     f"El precio del vehiculo es: {prediction}"
 
+if __name__ == "__main__":
+    uvicorn.run(app, port=8080, host="0.0.0.0")
+
 #env\scripts\activate
 #uvicorn main:app --reload
 #pip install pipreqs
+#pip freeze > requirements.txt
+    
+#
