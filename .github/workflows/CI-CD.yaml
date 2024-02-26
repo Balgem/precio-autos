@@ -34,7 +34,7 @@ jobs:
 
         - name: Format
           run: |
-            main.py
+            black main.py
 
         - name: Lint
           run: |
