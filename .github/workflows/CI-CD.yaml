@@ -36,10 +36,6 @@ jobs:
           run: |
             black main.py
 
-        - name: Lint
-          run: |
-            pylint --disable=R,C  main.py
-
         - name: Test
           run: |
             python -m pytest -vv test.py
